@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            font-family: sans-serif;
+            margin: 0;
+            background-color: azure;
+            padding: 2rem;
+        }
+        .chat-container{
+            width: 600px;
+            height: 500px;
+            margin: auto;
+            background-color: white;
+            padding: 1rem 3rem 0 4rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+            transform: translateY(50%);
+        }
+        .message{
+            display: flex;
+            margin-bottom:1.2rem;
+            align-items: end;
+        }
+        .message.bot{
+            justify-content: start;
+        }
+        .message.user{
+            justify-content: end;
+        }
+        .bubble{
+            max-width: 300px;
+            position: relative;
+            background-color:  #e0dfdf;
+            padding: 0.7rem 2rem;
+            border-radius: 20px;
+            word-break: break-word;
+        }
+        .name{
+            font-size: 0.8rem;
+            color: #555;
+            margin: 0 10px 2px;
+        }
+        .user.bubble{
+            background-color: yellow;
+        }
+        .user .name{
+            text-align: right;
+        }
+        .chat-container::-webkit-scrollbar{
+            background-color: #e0dfdf;
+            width: 30px;
+        }
+        .chat-container::-webkit-scrollbar-thumb{
+            background-color: #376daa;
+            border-radius: 6px;
+        }
+        .chat-container::-webkit-scrollbar-thumb{
+            background-color: #95bb0d;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="message bot">
+            <div class="avatar">
+                <div class="name">myBot</div>
+                <div class="bubble">안녕하세요. 무엇을 도와드릴까요?</div>
+            </div>
+        </div>
+        <div class="message user">
+            <div>
+                <div class="name">나</div>
+                <div class="bubble">내가 심심해보여요?</div>
+            </div>
+        </div>
+        <div class="message bot">
+            <div class="avatar">
+                <div class="name">myBot</div>
+                <div class="bubble">그렇다고 볼 수 있어요</div>
+            </div>
+        </div>
+        <div class="message user">
+            <div>
+                <div class="name">나</div>
+                <div class="bubble">Flex로 채팅화면 만들</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

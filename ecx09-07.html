@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(250,224,239);
+            padding-top: 8rem;
+            display: flex;
+            justify-content: center;
+        }
+        .card{
+            background-color: #fff;
+            max-width: 360px;
+            display: flex;
+            flex-direction: column;
+            border-radius: 30px;
+            overflow: hidden;
+            /* box-shadow: 0; */
+            /* font: 1.5rem rgba(0,0,0.5); */    
+        }
+        .banner{
+            background-image: url(https://thumbs.dreamstime.com/b/elephant-wallpaper-animal-eps-file-format-93002037.jpg);
+            display: flex;
+            
+            height: 150px;
+            justify-content: center;
+
+        }
+        .profile{
+            width: 100px;
+            height: 100px;
+            background-image: url(https://i.pinimg.com/originals/c3/8e/ab/c38eab3c55a3dd1e5dd31c2296a157a4.png);
+            background-size: 180px;
+            border-radius: 50%;
+            box-shadow: 5px 10px 20px rgba(0,0,0,1);
+            transform: translateY(50%);
+            transition: transform 0.3s ease;
+            /* position:relative; */
+            /* top:50px; */
+        }
+        .profile:hover{
+            transform: translateY(50%) scale(1.3);
+        }
+        .name{
+            text-align: center;
+            padding-top: 60px;
+        }
+        .follow-btn button{
+            font-size: medium;
+            font-weight: bold;
+            background-color: yellow;
+            border: none;
+            padding: 1rem;
+            outline: none;
+            border-radius: 50px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- div.card>div.banner>div.profile^h2.name{Kju}+div.follow-btn+div.desc{내용들...} -->
+    <div class="card">
+        <div class="banner">
+            <div class="profile"></div>
+        </div>
+        <h2 class="name">Kju</h2>
+        <div class="follow-btn"></div>
+        <div class="desc">세상에는 여러가지 감자가 있다.돌맹이 감자는 허풍이 심하다</div>
+    </div>
+</body>
+</html>

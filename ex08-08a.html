@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* body{
+            display: flex;
+            justify-content: start;
+            align-items: start;
+            height: 100vh;
+        } */
+        div{
+            width: 40px;
+            height: 40px;
+            background-color: cornflowerblue;
+            border-radius: 100px;
+            animation: balljump 2s ease-in-out infinite alternate;
+        }
+        @keyframes balljump {
+            0%{
+                transform: translate(0);
+            }
+            20%{
+                transform: translate(50px,-200px);
+            }
+            40%{
+                transform: translate(100px,-500px);
+            }
+            60%{
+                transform: translate(200,-200px);
+            }
+            100%{
+                transform: translate(300px,0);
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+</html>

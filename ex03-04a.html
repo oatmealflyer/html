@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="index.html">홈으로</a><br />
+   <fieldset>
+        <legend><strong>프런트엔드 개발자 지원서</strong></legend>
+        <div>HTML,CSS,자바스크립트의 기술을 이해하고 실무 경험이 있는 분을 찾습니다.</div>
+        <hr/>
+        
+        <table>
+            <div style="text-align: left;">개인정보</div>
+            <tr>
+                <td><label for="name">이름</label></td>
+                <td>
+                    <input type="text" id="name" style="width: 300px;" placeholder="공백 없이 입력하세요">
+                </td>
+            </tr>
+            <tr>
+                <td><label for="tel">연락처</label></td>
+                <td>
+                    <input type="text" id="tel" style="width: 300px;">
+                </td>
+            </tr>
+        </table>
+        
+        <table>
+            <div style="text-align: left;">지원 분야</div>
+                <tr>
+                    <td>
+                        <input type="radio" name="interest" id="web_publishing_y" value="web_publishing_yes" checked>
+                        <label for="web_publishing_y">웹 퍼블리싱</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="radio" name="interest" id="web_application_y" value="web_application_yes" >
+                        <label for="web_application_y">웹 애플리케이션 개발</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="radio" name="interest" id="programming_improv_y" value="programming_improv_yes" >
+                        <label for="programming_improv_y">개발 환경 개선</label>
+                    </td>
+                </tr>    
+        </table>
+
+        <table>
+            <div style="text-align: left;">지원 동기</div>
+            <tr>
+                <td>
+                    <input type="text" name="" id="" placeholder="본사 지원동기를 간략히 써 주세요" style="width:450px; height: 100px;">
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td><input type="submit" value="접수하기"></td>
+                <td><input type="reset" value="다시쓰기"></td>
+            </tr>
+        </table>
+   </fieldset>
+</body>
+</html>

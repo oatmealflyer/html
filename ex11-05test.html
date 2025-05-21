@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const con = prompt("값을 입력하세요")
+        console.log("10%할인된 값"+con*0.9)
+        console.log("20%할인된 값"+con*0.8)
+        console.log("30%할인된 값"+con*0.7)
+    </script>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td>10%할인된 값</td>
+            <td>20%할인된 값</td>
+            <td>30%할인된 값</td>
+        </tr>
+        <tr>
+            <td><script>document.write(+con*0.9)</script></td>
+            <td><script>document.write(+con*0.8)</script></td>
+            <td><script>document.write(+con*0.7)</script></td>
+        </tr>
+    </table>
+</body>
+</html>

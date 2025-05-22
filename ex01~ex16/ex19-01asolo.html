@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forEach구문</title>
+</head>
+<body>
+    <script>
+    const fruits = ["사과","바나나","딸기"];
+    fruits.forEach((fruit,index)=>{
+        //fruits 는 반복할 대상 
+        // fruit 는 fruits 를 하나씩 꺼내서 담음 
+        // index 는 해당 요소의 순서 
+        console.log(`${index+1}번째 과일 : ${fruit}`);
+    });
+    </script>
+</body>
+</html>

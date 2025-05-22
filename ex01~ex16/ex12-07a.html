@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>온도 측정기</title>
+    <style>
+        table,
+        tr,td{
+            width:100;
+            height:40px;
+            border-collapse: collapse;
+            border: 1px solid black;
+        }
+        #tmp_num{
+            text-align: center;
+            font-size: 14px;
+        }
+        #very_cold{
+            background-color: plum;
+        }
+        #cold{
+            background-color:skyblue;
+        }
+        #soso{
+            background-color:yellow;
+        }
+        #hot{
+            background-color:beige;
+        }
+        #very_hot{
+            background-color: orange;
+        }
+
+        #tmp{
+            animation: colorChange 3s infinite;
+        }
+        @keyframes colorChange{
+            0% {color: red;}
+            15%{color:orangered;}
+            30%{color:yellow;}
+            45%{color:greenyellow;}
+            55%{color:green;}
+            70%{color:skyblue;}
+            85%{color: blue;}
+            100%{color: blueviolet;}
+        }
+    </style>
+    <script>
+        const temp = prompt("현재 온도를 입력하세요");
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td colspan="6" id="tmp_num"> 16 미만</td>
+            <td colspan="4" id="tmp_num">16이상~22미만</td>
+            <td colspan="4" id="tmp_num">22이상~28미만</td>
+            <td colspan="3" id="tmp_num">28이상~32미만</td>
+            <td colspan="6" id="tmp_num">32이상</td>
+        </tr>
+        <tr>
+            <td id="very_cold"></td>
+            <td id="very_cold"></td>
+            <td id="very_cold"></td>
+            <td id="very_cold"></td>
+            <td id="very_cold"></td>
+            <td id="very_cold"></td>
+            <td id="cold"></td>
+            <td id="cold"></td>
+            <td id="cold"></td>
+            <td id="cold"></td>
+            <td id="soso"></td>
+            <td id="soso"></td>
+            <td id="soso"></td>
+            <td id="soso"></td>
+            <td id="hot"></td>
+            <td id="hot"></td>
+            <td id="hot"></td>
+            <td id="very_hot"></td>
+            <td id="very_hot"></td>
+            <td id="very_hot"></td>
+            <td id="very_hot"></td>
+            <td id="very_hot"></td>
+            <td id="very_hot"></td>
+        </tr>
+        <tr>
+            <td colspan="6">
+                <script>
+                    if(temp<16){
+                        document.write(`<p style="text-align:center">매우 춥습니다<p>`);
+                    }
+                </script>
+            </td>
+            <td colspan="4" >
+                <script>
+                    if(16<temp &&temp<22){
+                        document.write(`<p style="text-align:center">춥습니다<p>`);
+                    }
+                </script>
+            </td>
+            <td colspan="4" >
+                <script>
+                    if(22<=temp && temp<28){
+                        document.write(`<p style="text-align:center">보통입니다<p>`);
+                    }
+                </script>
+            </td>
+            <td colspan="3">
+                 <script>
+                    if(28<=temp && temp<32){
+                        document.write(`<p style="text-align:center">덥습니다<p>`);
+                    }
+                </script>
+            </td>
+            <td colspan="6">
+                 <script>
+                    if(32<=temp){
+                        document.write(`<p style="text-align:center">매우 덥습니다<p>`);
+                    }
+                </script>
+            </td>
+            
+        </tr>
+    </table>
+     <script>
+        if(temp <16 ){
+            document.write(`<p id="tmp">지금 온도는 ${temp} 이며 상태는 매우 춥습니다<p>`);
+        }
+        else if (temp < 22 ){
+            document.write(`<p id="tmp">지금 온도는 ${temp} 이며 상태는 춥습니다</strong><p>`);
+        }
+        else if (temp < 28 ){
+            document.write(`<p id="tmp">지금 온도는 ${temp} 이며 상태는 보통입니다<p>`);
+        }
+        else if (temp < 32 ){
+            document.write(`<p id="tmp">지금 온도는 ${temp} 이며 상태는 덥습니다<p>`);
+        }
+        else{
+            document.write(`<p id="tmp">지금 온도는 ${temp} 이며 상태는 매우 덥습니다<p>`);
+        }
+    </script>
+</body>
+</html>

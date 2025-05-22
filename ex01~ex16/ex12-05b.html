@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #hi{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: mymove 2s ease-in-out;
+        }
+        @keyframes mymove {
+            0%{
+                transform: translate(0);
+            }
+            55%{
+                transform: translate(0,300px);
+            }
+            100%{
+                transform: translate(0,700px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="hi">안녕하세요.</div>
+</body>
+</html>

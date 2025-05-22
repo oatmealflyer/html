@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시계</title>
+    <style>
+        div{
+            justify-content: center;
+            align-items: center;
+            width: 200;
+            height: 100vh;
+            background-color: blue;
+            border-radius: 100%;
+        }
+
+        #needle{
+            width: 15px;
+            height: 100vh;
+            position: absolute;
+            top: 5%;
+            left: 50%;
+            border-radius: 20%;
+            background-color: red;
+            color: white;
+
+        }
+
+        @keyframes turn {
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+        .needleturn{
+            animation: turn 3s infinite;
+        }
+
+
+    </style>
+    <script>
+        const needle = document.querySelector("#needle");
+
+        let timeId = null;
+        let num = 0 ; //증가시킬 변수 설정 
+
+        const fn1 = () =>{
+            timeId = setTimeout(()=>{
+                needle.innerHTML += `
+                
+                `;
+            },1000);
+        }
+
+    </script>
+</head>
+<body>
+   <div>
+        <span id="needle" class="needleturn">바늘이 되거라</span>
+   </div>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const arr = Array(100)
+        .fill(0)
+        .map((v,i)=>{
+            if(i===0){
+                return i;
+            }
+            else if(i%3 ===0 && i%5!==0){
+                return "짝";
+            }
+            else if(i%5===0 && i%3 !==0){
+                return "오~";
+            }else if(i%15==0){
+                return "아싸";
+            }else{
+                return i++;
+            }
+
+        });
+        console.log(arr);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

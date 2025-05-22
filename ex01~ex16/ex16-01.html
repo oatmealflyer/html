@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let dice = (i=0); // dice 는 눈금수 i는 증가값 
+        const diceCount = [0,0,0,0,0,0]; // diceCount 는 눈금수별 증가횟수 
+        const gameEnd = 10*1000; // 임계선 
+
+        while(i<gameEnd){
+            const array = new Uint8Array(1); //배열 하나 
+            crypto.getRandomValues(array); // 난수 배열에 집어넣기 
+            dice = (array[0] % 6) +1 ; // 난수에서 6을 나눈 나머지 (0,1,2,3,4,5) +1 => (1,2,3,4,5,6)
+            if(dice ==1){ //눈금수가 1일 때 
+                diceCount[0]++; // 눈금수 1의 증가횟수 추가 
+            }else if(dice == 2){
+                diceCount[1]++;
+            }else if(dice ==3){
+                diceCount[2]++;
+            }else if(dice ==4){
+                diceCount[3]++;
+            }else if(dice ==5){
+                diceCount[4]++;
+            }else if(dice ==6){
+                diceCount[5]++;
+            }
+            i++; // 증가값 
+        } 
+        console.log(diceCount);
+        const sumDice = 
+        diceCount[0]+
+        diceCount[1]+
+        diceCount[2]+
+        diceCount[3]+
+        diceCount[4]+
+        diceCount[5];
+
+    </script>
+</head>
+<body>
+    <h1>주사위 만회 굴리는 중</h1>
+    <h2 id="disp">로딩중 ...</h2>
+    <h3 id="verif">분석중 ...</h3>
+
+    <script>
+        //HTML 문서에서 id가 "disp" 인 요소 <h2>를 찾음 
+        const h2 = document.querySelector("#disp"); 
+
+        // setTimeout(()=>{},2000) 2초(2000 밀리초 ) 후에 특정 작업을 실행하도록 설정 
+        setTimeout(()=>{
+            //h2 요소의 텍스트 내용을 diceCount(주사위 눈금 횟수 배열 값)으로 변경  
+            h2.textContent = `${diceCount}`;
+        },2000);
+
+        const h3 = document.querySelector("#verif");
+        setTimeout(()=>{
+            h3.textContent = `${sumDice}회 검증 완료`;
+        })
+    </script>
+</body>
+</html>

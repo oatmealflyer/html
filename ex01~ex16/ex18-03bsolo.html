@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>타이머응용</title>
+    <script>
+        const btn = document.querySelectorAll("button");
+        const div = document.querySelector("div");
+
+        //타이머 응용 재귀함수 사용 
+        let timeId = null ; 
+        let num = 0 ; //증가시킬 변수 설정 
+
+        const fn1 = () =>{
+            timeId = setTimeout(() => {
+               div.innerHTML += `${++num}반복중...<br>` 
+            }, 1000);
+        };
+            fn1();
+        const stopTimer
+    </script>
+</head>
+<body>
+    <button>응용 타이머 동작</button>
+    <button>응용 타이머 정지</button>
+</body>
+</html>

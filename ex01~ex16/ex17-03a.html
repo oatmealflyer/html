@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- h1#count{글자수:0} -->
+    <h1 id="count">글자수 : 0</h1>
+    <textarea name="" cols="20" rows="10" maxlength="200"></textarea>
+
+    <script>
+       const textArea = document.querySelector("textarea");
+       const updateText = () => {
+            const count = document.querySelector("#count");
+            count.textContent = `글자수:${textArea.value.length}`;
+       };
+       /* addEventListener 
+          는 지정된 이벤트가 발생할 때 ,특정 동작을 수행하도록 이벤트 리스너 추가 
+          
+          texArea 요소에 keyup 이벤트 리스너 추가 
+          사용자가 텍스트 영역에서 키를 눌렀다 뗄 때(keyup 이벤트가 발생할 때 ) updateText 함수 실행 
+        */
+       textArea.addEventListener("keyup",updateText);
+       
+    </script>
+</body>
+</html>

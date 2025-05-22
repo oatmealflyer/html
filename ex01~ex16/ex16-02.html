@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>호이스팅</title>
+</head>
+<body>
+    <!-- 호이스팅 : JavacScript에서 변수를 선언하거나 함수를 정의할 때 , 
+                    해당 선언이 코드의 최상단으로 끌어올려지는 것처럼
+                    동작하는 특성 -->
+    <!-- 함수 선언문(function fn2(){}) 은 완전 호스팅 
+         함수 표현식(const fn1 = function(){}) 은 변수 선언(const fn1)만 호스팅 됨, 변수 선언은 초기화 되기전에 사용x -->
+    <script>
+        /* (function fn2()) 함수 선언문 호이스팅 위치 */
+        fn2(); //에러없이 실행가능, 호이스팅됨 
+        const fn1 = function(){
+            console.log("fn1");
+        };
+        fn1(); // 선언후 사용가능 
+
+        function fn2(){
+            console.log("fn2");
+        }
+    </script>
+</body>
+</html>

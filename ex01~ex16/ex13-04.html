@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    table,
+    tr,
+    td{
+        border-collapse: collapse;
+        border: solid 1px black;
+        text-align: center;
+        margin: auto;
+    }
+    h1{
+       text-align: center; 
+    }
+    </style>
+</head>
+<body>
+    <script>
+    const oneline_member = +prompt("한줄에 몇 명 앉을래?"); //td 갯수 결정 
+    let total_member = +prompt("총 인원 몇 명?"); // td x tr 갯수 결정
+    total_member = Math.round(total_member / oneline_member); 
+
+    let list = "";
+    let num = 1;
+    list += `<h1>자리배치도</h1><br><table>` ;
+        for(let j=1 ; j<=total_member; j++){
+            list+= `<tr>`;
+            for(let i=1; i< (oneline_member + 1);i++){
+           list+= `<td>좌석${num++}<td>`
+        }
+        list+=`</tr>`;
+        };
+        
+    list += `</table>`;
+    document.body.innerHTML = list;5
+    </script>
+</body>
+</html> 

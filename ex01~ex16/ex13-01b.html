@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <title>Document</title>
+    <style>
+        div{
+            padding:0 ;
+            margin: 45% auto;
+            background:url(https://image.shutterstock.com/image-vector/rock-scissors-paper-icons-hand-260nw-1795145203.jpg);
+            width: 200px;
+            height: 200px;
+        }
+        .zzi{
+            background-position: -150px 0;
+        }
+        .bba{
+            background-position: -280px 0;
+        }
+    </style>
+    
+</head>
+<body>
+    <script>
+        const now = dayjs()
+        const random = now.get("ms") % 3; //ms는 0부터 99까지 이므로 3으로 나눈 나머지 0,1,2는 각각 33% 확률을 가짐 = 가위바위보 확률과 같음 
+        console.log(random);
+        
+        if(random==0){
+        document.body.innerHTML =`<div class =""></div>`;
+        }
+        else if(random==1){
+        document.body.innerHTML =`<div class ="zzi"></div>`;
+        }
+        else{
+        document.body.innerHTML =`<div class ="bba"></div>`;
+        }
+
+
+    </script>
+</body>
+</html>

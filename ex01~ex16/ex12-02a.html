@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const score = +prompt("성적을 입력하세요");
+        if(score == 100){
+            console.log(score,"는 A++입니다");
+            alert(`${score}는 A++ 입니다`);
+        }
+        else if(score >= 90){
+            console.log(score,"는 A입니다");
+             alert(`${score}는 A 입니다`);
+        }
+        else if(score >= 80){
+            console.log(score,"는 B입니다");
+            alert(`${score}는 B 입니다`);
+        }
+        else if(score >= 70){
+            console.log(score,"는 C입니다");
+            alert(`${score}는 C 입니다`);
+        }
+        else if(score >= 60 ){
+            console.log(score,"는 D입니다");
+            alert(`${score}는 D 입니다`);
+        }
+        else if(score <60 ){
+            console.log(score,"는 F입니다")
+            alert(`${score}는 F 입니다`);
+        }
+        else{
+            console.log(score,"100점과 0 점사이 성적을 입력하세요 . 점수를 잘못 입력하셨습니다")
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

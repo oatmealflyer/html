@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+    let list = "";
+    list += `<table>`;
+    for(let j=2; j<10;j++){
+        list += `<tr>
+                <th colspan="2">${j}단</th>
+            </tr> `;
+        for(let i=1;i<10;i++){
+        list += `<tr><td>${j}x${i}</td>
+                    <td>${i*j}</td></tr>`;
+    }
+
+    }
+    
+    list+= `</table>`;
+    document.body.innerHTML=list;
+    </script>
+</body>
+</html>

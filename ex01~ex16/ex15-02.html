@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* Math.random()함수는 0이상 1미만의 난수를 생성 
+        여기에 100을 곱할 경우 , 0 이상 100미만의 값이 됨 
+        Math.floor()함수는 소수점을 버리고 정수로 변환 
+        ran 범위 : 0<= ran <=99  */
+        const ran = Math.floor(Math.random()*100); 
+
+        let list = "";
+        if(ran<3){
+            list+= `<h1>3%의 확률로 유니크 아이템 출현</h1>`;
+        } 
+        else if(ran<13){ // 0<=ran<3까지 제외(-3)했으므로 10 + 3 해줘야 10%  
+            list+= `<h1>10%의 확률로 레어아이템 출현</h1>` ;
+        }
+        else if(ran<43){ // 0<=ran<13까지 제외(-13)했으므로 30+13 해줘야 30%
+            list+= `<h1>30%의 확률로 매직아이템 출현</h1>`;
+        }else{
+            list+= `<h1>나머지 일반 쓰레기 아이템 출현</h1>`;
+        }
+
+        list+= `<h1>랜덤 수치는 ${ran}값입니다</h1>`;
+        document.body.innerHTML = list;
+    </script>
+</body>
+</html>

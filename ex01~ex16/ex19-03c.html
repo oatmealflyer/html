@@ -5,15 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>메소드체이닝</title>
     <script>
-        const num = Array(100)
-        .fill(0)
-        .map((v,i)=>i);
+        const num = Array(100) // 길이가 100인 배열 생성 
+        .fill(0) // 모든 값을 0으로 채우기 
+        //.map() 배열의 각 요소를 변환해서 새로운 배열을 만드는 함수 
+        // 기존 배열의 값을 원하는 방식으로 변경할 때 사용 
+        .map((v,i)=>i); 
+        // v는 현재 요소의 값(여기선 전부 0)
+        // i는 현재 요소의 인데스 번호(0부터 시작)
+        // v 대신 각 요소의 인덱스 번호(0~99)를 반환 
         console.log(num);
 
         num
         .filter((v)=> v%3 ===0)
+        // num 배열에서 3의 배수만 남김 
         .map(v=>v*v)
+        // .filter()로 고른 숫자를 제곱하여 반환  
         .forEach((v,i)=>console.log(`${i+1}:${v}`));
+        // 각 숫자에 인덱스(+1 했으므로 1부터 시작)를 붙여 출력 
+        //1:0 2:9 형식
     </script>
 </head>
 <body>

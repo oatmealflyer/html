@@ -17,13 +17,13 @@
 <script>
     const rects = document.querySelectorAll('.rect')
     rects.forEach((rect,i)=>{
-        // rect 클래스가 있는 모든 img 태그를 하나씩 꺼내서 rect 변수에 담고 , 
+        // rect 클래스가 있는 모든 img 태그를 하나씩 꺼내서 rects 변수에 담고 , 
         // i 는 해당 요소의 순서 
         const width = (i + 1) * 100 ; 
         const url = `https://placecats.com/${width}/300`;
-        console.log(rect);
         rect.src = url;
-    })
+        console.log(rect);
+    });
 </script>
 </body>
 </html>

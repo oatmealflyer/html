@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시계</title>
+    <style>
+        .btn{
+            text-align: center;
+            margin: 20px;
+        }
+        .clock{
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background-color: rgb(180, 200, 243);
+             /*   margin : 0 위쪽 여백 없음 / auto 좌우 가운데 정렬 / 30px 아래쪽 여백 추가 */
+            margin: 0 auto 30px;
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.646);
+            /* position : relative ; 기본적으로 원래 위치 유지, 
+            top,left,right,button 속성 사용시 원래 위치 기준 이동  */
+            position: relative;     
+        }
+        #ms{
+            width: 5px;
+            height: 180px;
+            background-color:rgb(107, 105, 221);
+            border-radius: 20px;
+            /* position:absolute 
+            부모요소 중 position :relative ; 또는 absolute, fixed 속성을 가진 요소를 기준으로 위치 지정*/
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            /* translate(-50%) -> x축(가로방향)으로 현재 크기의 50%만큼 왼쪽으로 이동 */
+            transform: translate(-50%);
+            /*  transform-origin: 50% 100%;
+             X축(가로 방향) 기준이 요소의 너비의 50% 지점(가운데) 
+             Y축(세로 방향) 기준이 요소의 높이의 100% 지점(하단)
+             */
+            transform-origin: 50% 100%;
+            /* z-index 요소의 겹치는 순서(레이어)
+            z-index 값이 높을수록 화면에서 앞쪽으로 표시 */
+            z-index: 100;
+        }
+        #ss{
+            width: 10px;
+            height: 150px;
+            background-color: rgb(21, 6, 160);
+            border-radius: 20px;
+            position: absolute;
+            top:40px;
+            left: 50%;
+            transform: translate(-50%);
+            transform-origin: 50% 100%;
+        }
+        button{
+            margin: 10px;
+        }
+        #rec-disp{
+            text-align: center;
+            list-style-position: inside;
+        }
+    </style>
+</head>
+<body>
+    <!-- div.btn>div#time_disp+button*3^div.clock>div#ms+div#ss -->
+    <div class="btn">
+        <div id="time_disp">0 min 0 sec 000 msec</div>
+        <button>시작버튼 </button>
+        <button>기록버튼</button>
+        <button>정지버튼</button>
+        <button>리셋버튼</button>
+    </div>
+    <div class="clock">
+        <div id="ms"></div>
+        <div id="ss"></div>
+    </div>
+    <!-- ol#rec-disp{[기록]} -->
+    <ol id="rec-disp">
+        [기록]
+    </ol>
+</body>
+</html>

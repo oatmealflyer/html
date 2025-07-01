@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,
+        tr,
+        td{
+            text-align: center;
+        }
+        section{
+            height: 95vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            color: rgb(130, 179, 243);
+            background-color: rgb(208, 222, 235);
+        }
+        section:nth-of-type(even){
+            color: rgb(99, 150, 216);
+            background-color:rgb(184, 211, 236);;
+        }
+        .scroll-text{
+            position: fixed;
+            top: 250px;
+            right: 10%;
+            /* transform: translateX(-50%); */
+            font-size: 1.3rem;
+            color: darkgrey;
+            box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.53);
+            padding: 10px;
+            border-radius: 24px;
+        }
+        .left-menu{
+            position: fixed;
+            height: 250px;
+            width: 140px;
+            color: rgb(99, 97, 97);
+            padding: 10px;
+            border-radius: 10px;
+            opacity: 1;
+            transition: 0.5s ease;
+            top: 100px;
+            
+            /* left: -200px; */
+        }
+        .show-left{
+            left: 10px;
+            opacity: 1;
+        } 
+        .firstSection{
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        #firstSection_Btn{
+            height: 50px;
+            width: 100px;
+            border-radius: 20px;
+            border-color: blue;
+            color: rgb(39, 38, 38);
+            background-color: rgba(50, 199, 199, 0.322);
+        }
+
+    </style>
+</head>
+<div class="scroll-text" id="scrollText">
+    스크롤을 내려보세요 
+</div>
+<div class="left-menu" id="leftMenu">
+<ul>
+    <p>[메뉴 목록]</p>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+</div>
+<body>
+    <section>
+        <div class="firstSection">
+            <h1>-이경주-<br/>프론트 엔드 개발자 포토폴리오</h1>
+            <h3>---</h3>
+            <h2>안녕하세요<br/>본질에 집중하는 프론트 엔드 개발자<br/>이경주입니다.</h2>
+            <button onclick="" id="firstSection_Btn">더 알아보기</button>
+        </div>
+
+    </section>
+    <section>
+        <h1>ABOUT ME</h1>
+        <table border="1">
+            <tr>
+                <td rowspan="2">
+                    <img src="..\img\name.png" alt="">
+                </td>
+                <td>이름</td>
+                <td rowspan="2"><img src="..\img\birth.png" alt=""></td>
+                <td>생년월일 </td>
+                <td rowspan="2"><img src="..\img\address.png" alt=""></td>
+                <td>위치</td>
+            </tr>
+            <tr>
+                <td>이경주</td>
+                <td>00.03.18</td>
+                <td>부산광역시 동래구</td>
+            </tr>
+            <tr>
+                <td rowspan="2"><img src="..\img\tel.png" alt=""></td>
+                <td>연락처</td>
+                <td rowspan="2"><img src="..\img\email.png" alt=""></td>
+                <td>이메일</td>
+                <td rowspan="2"><img src="..\img\school.png" alt=""></td>
+                <td>학력</td>
+            </tr>
+            <tr>
+                <td>010-7552-2972</td>
+                <td>rudwnzlxl6@naver.com</td>
+                <td>학력 적자</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </section>
+    <section>SKILLS</section>
+    <section>ARCHIVING</section>
+    <section>PROJECTS</section>
+</body>
+
+<script>
+    const scrollText = document.getElementById("scrollText");
+    const leftMenu = document.getElementById("leftMenu");
+    
+    window.addEventListener("scroll",()=>{
+    const scrollY = window.scrollY;
+    if(scrollY <500){
+        scrollText.textContent = `스크롤을 내려보세요/ ${scrollY}`;
+    }
+    else if(scrollY<1200){
+        scrollText.textContent =`ABOUT ME/ ${scrollY}`;
+    }
+    else if(scrollY<1900){
+        scrollText.textContent =`SKILLS section3/ ${scrollY}`;
+    }
+    else if(scrollY<2700){
+        scrollText.textContent =`ARCHIVING section4 / ${scrollY}`;
+    }
+    else if(scrollY<3500){
+        scrollText.textContent =`PROJECTS section5 / ${scrollY}`;
+    }
+});
+</script>
+</html>
